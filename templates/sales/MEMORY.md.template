@@ -1,0 +1,122 @@
+# MEMORY.md - ${agent_name} Long-Term Memory
+
+## Who You Are
+- **Name:** ${agent_name}
+- **Role:** Sales Representative Agent
+- **DISC Profile:** ${primary_disc}+${secondary_disc} (${primary_disc_name} + ${secondary_disc_name})
+- **Vibe:** ${communication_style_tone}, results-driven, persuasive, strategic
+- **Mission:** Build client relationships and close deals through strategic relationship management
+
+---
+
+## Pipeline Overview
+
+### Active Deals
+*Track current sales opportunities*
+
+| Prospect | Company | Stage | Value | Probability | Next Action | Due Date |
+|----------|---------|-------|-------|-------------|-------------|----------|
+| [Name] | [Company] | [Discovery/Proposal/Negotiation] | [$] | [%] | [Action] | [Date] |
+
+### Won Deals
+*Closed opportunities with learnings*
+
+| Prospect | Company | Value | Close Date | Key Success Factors |
+|----------|---------|-------|------------|---------------------|
+| [Name] | [Company] | [$] | [Date] | [What worked] |
+
+### Lost Deals
+*Lost opportunities with analysis*
+
+| Prospect | Company | Value | Lost To | Reason | Lessons Learned |
+|----------|---------|-------|---------|--------|-----------------|
+| [Name] | [Company] | [$] | [Competitor/No Decision] | [Why lost] | [Key takeaways] |
+
+---
+
+## Prospect Database
+
+### Qualified Leads
+| Prospect | Company | Role | Needs | Status | Last Contact |
+|----------|---------|------|-------|--------|--------------|
+| [Name] | [Company] | [Title] | [Key needs] | [Hot/Warm/Cold] | [Date] |
+
+### Prospect Insights
+*Key information about prospects and their businesses*
+
+| Prospect | Industry | Pain Points | Decision Process | Budget | Timeline |
+|----------|----------|-------------|------------------|--------|----------|
+| [Name] | [Industry] | [Challenges] | [How they decide] | [Range] | [When] |
+
+---
+
+## Communication History
+
+### Recent Interactions
+| Date | Prospect | Channel | Summary | Next Steps |
+|------|----------|---------|---------|------------|
+| [Date] | [Name] | [Email/Call/Meeting] | [What happened] | [Action items] |
+
+### Follow-up Reminders
+| Prospect | Reason | Due Date | Priority |
+|----------|--------|----------|----------|
+| [Name] | [Follow-up reason] | [Date] | [High/Med/Low] |
+
+---
+
+## Competitive Intelligence
+
+### Competitor Analysis
+| Competitor | Strengths | Weaknesses | Our Advantage | Pricing |
+|------------|-----------|------------|---------------|---------|
+| [Name] | [What they do well] | [Where they fall short] | [How we win] | [Their pricing] |
+
+### Market Positioning
+*How we position against competition*
+
+- **Key Differentiators:** [What makes us unique]
+- **Competitive Responses:** [How to handle competitor comparisons]
+- **Win Strategies:** [Approaches that work against each competitor]
+
+---
+
+## Sales Performance
+
+### Metrics
+| Metric | Current | Target | Trend | Notes |
+|--------|---------|--------|-------|-------|
+| Pipeline Value | [$] | [$] | [↑/↓] | [Context] |
+| Win Rate | [%] | [%] | [↑/↓] | [Context] |
+| Average Deal Size | [$] | [$] | [↑/↓] | [Context] |
+| Sales Cycle Length | [Days] | [Days] | [↑/↓] | [Context] |
+
+### Activity Tracking
+| Activity | This Week | Target | Status |
+|----------|-----------|--------|--------|
+| Outreach Messages | [Count] | [Target] | [On track/Behind] |
+| Discovery Calls | [Count] | [Target] | [On track/Behind] |
+| Proposals Sent | [Count] | [Target] | [On track/Behind] |
+
+---
+
+## Lessons Learned
+
+### What Works Well
+- [Successful outreach approach]
+- [Effective objection handling]
+- [Winning negotiation tactic]
+
+### What to Improve
+- [Area needing optimization]
+- [Failed approach and why]
+- [Opportunity to pursue]
+
+### Important Decisions
+- **[Date]:** [Sales decision] - [Rationale]
+- **[Date]:** [Sales decision] - [Rationale]
+
+---
+
+**Source:** Sales Agent Memory System  
+**Last Updated:** ${generation_date}  
+**DISC Profile:** ${primary_disc}+${secondary_disc}

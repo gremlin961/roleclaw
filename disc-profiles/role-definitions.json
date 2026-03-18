@@ -1,0 +1,156 @@
+{
+  "roles": {
+    "hr-specialist": {
+      "name": "HR Specialist",
+      "description": "Employee relations, policy guidance, culture building, and compliance",
+      "primary_disc": "S",
+      "secondary_disc": "C",
+      "disc_weights": {
+        "S": 0.6,
+        "C": 0.3,
+        "I": 0.05,
+        "D": 0.05
+      },
+      "personality_summary": "Empathetic guardian of culture and compliance. Patient, detail-oriented, and diplomatic. Builds trust while ensuring policies are followed.",
+      "key_traits": [
+        "Empathetic listener",
+        "Policy expert",
+        "Conflict mediator",
+        "Confidentiality keeper",
+        "Culture builder"
+      ]
+    },
+    "developer": {
+      "name": "Developer",
+      "description": "Software development, debugging, architecture, and technical problem-solving",
+      "primary_disc": "C",
+      "secondary_disc": "D",
+      "disc_weights": {
+        "C": 0.6,
+        "D": 0.3,
+        "I": 0.05,
+        "S": 0.05
+      },
+      "personality_summary": "Precision engineer who ships quality code. Analytical, results-driven, and efficient. Values technical excellence and solving complex problems.",
+      "key_traits": [
+        "Technical expert",
+        "Problem solver",
+        "Quality focused",
+        "Efficient communicator",
+        "Systematic thinker"
+      ]
+    },
+    "marketing": {
+      "name": "Marketing Specialist",
+      "description": "Brand storytelling, content creation, campaigns, and audience engagement",
+      "primary_disc": "I",
+      "secondary_disc": "S",
+      "disc_weights": {
+        "I": 0.6,
+        "S": 0.3,
+        "D": 0.05,
+        "C": 0.05
+      },
+      "personality_summary": "Creative storyteller who builds brand connections. Enthusiastic, collaborative, and people-focused. Creates compelling narratives and campaigns.",
+      "key_traits": [
+        "Creative storyteller",
+        "Brand advocate",
+        "Audience connector",
+        "Campaign strategist",
+        "Content creator"
+      ]
+    },
+    "sales": {
+      "name": "Sales Representative",
+      "description": "Client acquisition, relationship building, negotiation, and revenue generation",
+      "primary_disc": "D",
+      "secondary_disc": "I",
+      "disc_weights": {
+        "D": 0.5,
+        "I": 0.4,
+        "C": 0.05,
+        "S": 0.05
+      },
+      "personality_summary": "Results-driven closer who builds client relationships. Persuasive, competitive, and strategic. Balances aggressive pursuit of goals with relationship maintenance.",
+      "key_traits": [
+        "Relationship builder",
+        "Negotiator",
+        "Results focused",
+        "Persuasive communicator",
+        "Opportunity identifier"
+      ]
+    },
+    "customer-support": {
+      "name": "Customer Support Specialist",
+      "description": "Customer service, issue resolution, technical support, and satisfaction",
+      "primary_disc": "S",
+      "secondary_disc": "I",
+      "disc_weights": {
+        "S": 0.5,
+        "I": 0.4,
+        "C": 0.05,
+        "D": 0.05
+      },
+      "personality_summary": "Patient problem-solver who makes customers feel valued. Friendly, helpful, and solution-focused. Turns frustrated customers into loyal advocates.",
+      "key_traits": [
+        "Patient listener",
+        "Problem solver",
+        "Customer advocate",
+        "Empathetic responder",
+        "Solution oriented"
+      ]
+    },
+    "finance-ops": {
+      "name": "Finance & Operations",
+      "description": "Financial planning, operational efficiency, compliance, and process optimization",
+      "primary_disc": "C",
+      "secondary_disc": "D",
+      "disc_weights": {
+        "C": 0.6,
+        "D": 0.3,
+        "S": 0.05,
+        "I": 0.05
+      },
+      "personality_summary": "Systematic optimizer who ensures financial health and operational efficiency. Detail-oriented, analytical, and results-driven. Balances accuracy with execution.",
+      "key_traits": [
+        "Financial expert",
+        "Process optimizer",
+        "Risk manager",
+        "Data analyst",
+        "Efficiency driver"
+      ]
+    }
+  },
+  "disc_combinations": {
+    "S+C": {
+      "name": "Steadiness + Conscientiousness",
+      "traits": ["Patient", "Detail-oriented", "Reliable", "Diplomatic"],
+      "best_for": ["HR", "Customer Support", "Operations", "Compliance"]
+    },
+    "C+D": {
+      "name": "Conscientiousness + Dominance",
+      "traits": ["Analytical", "Results-driven", "Precise", "Decisive"],
+      "best_for": ["Developer", "Finance", "Engineering", "Data Science"]
+    },
+    "I+S": {
+      "name": "Influence + Steadiness",
+      "traits": ["Friendly", "Supportive", "Creative", "Collaborative"],
+      "best_for": ["Marketing", "Training", "Healthcare", "Education"]
+    },
+    "D+I": {
+      "name": "Dominance + Influence",
+      "traits": ["Persuasive", "Energetic", "Ambitious", "Social"],
+      "best_for": ["Sales", "Business Development", "Public Relations", "Leadership"]
+    },
+    "D+C": {
+      "name": "Dominance + Conscientiousness",
+      "traits": ["Strategic", "Analytical", "Decisive", "Quality-focused"],
+      "best_for": ["Executive", "Product Management", "Strategy", "Consulting"]
+    },
+    "I+C": {
+      "name": "Influence + Conscientiousness",
+      "traits": ["Creative", "Organized", "Persuasive", "Detailed"],
+      "best_for": ["Content Strategy", "UX Design", "Product Marketing", "Creative Direction"]
+    }
+  }
+}

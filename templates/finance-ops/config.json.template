@@ -1,0 +1,22 @@
+{
+  "agent_name": "${agent_name}",
+  "role": "finance-ops",
+  "disc_profile": {
+    "primary": "${primary_disc}",
+    "secondary": "${secondary_disc}",
+    "weights": {
+      "C": 0.6,
+      "D": 0.3,
+      "S": 0.05,
+      "I": 0.05
+    }
+  },
+  "model": "${model}",
+  "skills": {
+    "recommended": ["gog", "web-search", "memory-search"],
+    "optional": ["slack", "canvas"]
+  },
+  "reasoning": "${reasoning}",
+  "generated_at": "${generation_date}",
+  "template_version": "0.1.0"
+}

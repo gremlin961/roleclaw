@@ -1,0 +1,134 @@
+# MEMORY.md - ${agent_name} Long-Term Memory
+
+## Who You Are
+- **Name:** ${agent_name}
+- **Role:** Finance & Operations Agent
+- **DISC Profile:** ${primary_disc}+${secondary_disc} (${primary_disc_name} + ${secondary_disc_name})
+- **Vibe:** ${communication_style_tone}, detail-oriented, systematic, efficient
+- **Mission:** Ensure financial health and operational efficiency through data-driven analysis
+
+---
+
+## Financial Overview
+
+### Revenue & Expenses
+*Track financial performance*
+
+| Period | Revenue | Expenses | Profit | Margin | Notes |
+|--------|---------|----------|--------|--------|-------|
+| [Month/Quarter] | [$] | [$] | [$] | [%] | [Context] |
+
+### Budget Tracking
+*Compare actual vs budgeted figures*
+
+| Category | Budget | Actual | Variance | Status |
+|----------|--------|--------|----------|--------|
+| [Category] | [$] | [$] | [$/%] | [On track/Over/Under] |
+
+---
+
+## Operational Metrics
+
+### Key Performance Indicators
+| KPI | Current | Target | Trend | Notes |
+|-----|---------|--------|-------|-------|
+| [KPI Name] | [Value] | [Goal] | [↑/↓] | [Context] |
+
+### Process Efficiency
+| Process | Cycle Time | Cost | Efficiency | Improvement |
+|---------|------------|------|------------|-------------|
+| [Process Name] | [Time] | [$] | [%] | [Notes] |
+
+---
+
+## Transaction Log
+
+### Recent Transactions
+| Date | Type | Description | Amount | Category | Status |
+|------|------|-------------|--------|----------|--------|
+| [Date] | [Revenue/Expense] | [Description] | [$] | [Category] | [Complete/Pending] |
+
+### Recurring Expenses
+| Vendor | Amount | Frequency | Category | Next Due |
+|--------|--------|-----------|----------|----------|
+| [Vendor] | [$] | [Monthly/Quarterly] | [Category] | [Date] |
+
+---
+
+## Compliance & Audit
+
+### Compliance Checklist
+| Requirement | Status | Last Review | Next Review | Notes |
+|-------------|--------|-------------|-------------|-------|
+| [Requirement] | [Complete/Pending] | [Date] | [Date] | [Notes] |
+
+### Audit Log
+| Date | Type | Findings | Action Taken | Status |
+|------|------|----------|--------------|--------|
+| [Date] | [Internal/External] | [Summary] | [Actions] | [Open/Closed] |
+
+---
+
+## Forecasting & Projections
+
+### Revenue Forecast
+| Period | Projected | Confidence | Assumptions |
+|--------|-----------|------------|-------------|
+| [Month/Quarter] | [$] | [High/Med/Low] | [Key assumptions] |
+
+### Expense Projections
+| Category | Projected | Variance from Budget | Notes |
+|----------|-----------|----------------------|-------|
+| [Category] | [$] | [$/%] | [Context] |
+
+---
+
+## Process Improvements
+
+### Completed Improvements
+| Process | Improvement | Impact | Implementation Date |
+|---------|-------------|--------|---------------------|
+| [Process] | [What changed] | [Efficiency gain/cost savings] | [Date] |
+
+### Pending Improvements
+| Process | Proposed Improvement | Expected Impact | Priority | Status |
+|---------|---------------------|-----------------|----------|--------|
+| [Process] | [Proposal] | [Expected benefit] | [High/Med/Low] | [Planning/In Progress] |
+
+---
+
+## Risk Assessment
+
+### Identified Risks
+| Risk | Probability | Impact | Mitigation | Status |
+|------|-------------|--------|------------|--------|
+| [Risk Description] | [High/Med/Low] | [High/Med/Low] | [Mitigation plan] | [Active/Monitored] |
+
+### Incident Log
+| Date | Incident | Impact | Resolution | Lessons Learned |
+|------|----------|--------|------------|-----------------|
+| [Date] | [Description] | [Impact] | [How resolved] | [Key takeaways] |
+
+---
+
+## Lessons Learned
+
+### What Works Well
+- [Successful financial strategy]
+- [Effective process improvement]
+- [Cost-saving initiative]
+
+### What to Improve
+- [Area needing optimization]
+- [Inefficiency to address]
+- [Risk to mitigate]
+
+### Important Decisions
+- **[Date]:** [Financial/operational decision] - [Rationale]
+- **[Date]:** [Financial/operational decision] - [Rationale]
+
+---
+
+**Source:** Finance & Operations Agent Memory System  
+**Last Updated:** ${generation_date}  
+**DISC Profile:** ${primary_disc}+${secondary_disc}

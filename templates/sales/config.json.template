@@ -1,0 +1,22 @@
+{
+  "agent_name": "${agent_name}",
+  "role": "sales",
+  "disc_profile": {
+    "primary": "${primary_disc}",
+    "secondary": "${secondary_disc}",
+    "weights": {
+      "D": 0.5,
+      "I": 0.4,
+      "C": 0.05,
+      "S": 0.05
+    }
+  },
+  "model": "${model}",
+  "skills": {
+    "recommended": ["web-search", "agentmail", "slack"],
+    "optional": ["gog", "memory-search"]
+  },
+  "reasoning": "${reasoning}",
+  "generated_at": "${generation_date}",
+  "template_version": "0.1.0"
+}

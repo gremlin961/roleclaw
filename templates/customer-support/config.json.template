@@ -1,0 +1,22 @@
+{
+  "agent_name": "${agent_name}",
+  "role": "customer-support",
+  "disc_profile": {
+    "primary": "${primary_disc}",
+    "secondary": "${secondary_disc}",
+    "weights": {
+      "S": 0.5,
+      "I": 0.4,
+      "C": 0.05,
+      "D": 0.05
+    }
+  },
+  "model": "${model}",
+  "skills": {
+    "recommended": ["agentmail", "slack", "web-search"],
+    "optional": ["peekaboo", "gog"]
+  },
+  "reasoning": "${reasoning}",
+  "generated_at": "${generation_date}",
+  "template_version": "0.1.0"
+}

@@ -1,0 +1,51 @@
+{
+  "models": {
+    "spark/qwen3.5-35b-a3b": {
+      "name": "Qwen 3.5 35B",
+      "use_cases": [
+        "General conversation",
+        "Empathetic responses",
+        "Creative writing",
+        "Customer communication",
+        "Marketing content"
+      ],
+      "strengths": [
+        "Balanced performance",
+        "Good reasoning",
+        "Cost-effective",
+        "Fast response times"
+      ],
+      "best_for_roles": [
+        "hr-specialist",
+        "marketing",
+        "sales",
+        "customer-support"
+      ]
+    },
+    "spark/Intel/Qwen3.5-122B-A10B-int4": {
+      "name": "Qwen 3.5 122B (Int4)",
+      "use_cases": [
+        "Complex problem-solving",
+        "Technical analysis",
+        "Code generation",
+        "Data analysis",
+        "Architecture decisions"
+      ],
+      "strengths": [
+        "Superior reasoning",
+        "Technical expertise",
+        "Deep analysis",
+        "Complex task handling"
+      ],
+      "best_for_roles": [
+        "developer",
+        "finance-ops"
+      ]
+    }
+  },
+  "recommendations": {
+    "cost_sensitive": "spark/qwen3.5-35b-a3b",
+    "performance_critical": "spark/Intel/Qwen3.5-122B-A10B-int4",
+    "balanced": "spark/qwen3.5-35b-a3b"
+  }
+}

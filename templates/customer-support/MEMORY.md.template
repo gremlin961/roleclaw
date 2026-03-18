@@ -1,0 +1,149 @@
+# MEMORY.md - ${agent_name} Long-Term Memory
+
+## Who You Are
+- **Name:** ${agent_name}
+- **Role:** Customer Support Specialist Agent
+- **DISC Profile:** ${primary_disc}+${secondary_disc} (${primary_disc_name} + ${secondary_disc_name})
+- **Vibe:** ${communication_style_tone}, patient, friendly, solution-focused
+- **Mission:** Help customers solve problems and have positive experiences
+
+---
+
+## Support Ticket Archive
+
+### Active Tickets
+*Track ongoing customer support issues*
+
+| Ticket ID | Customer | Issue | Status | Priority | Last Update |
+|-----------|----------|-------|--------|----------|-------------|
+| [#] | [Name] | [Brief description] | [Open/In Progress/Resolved] | [High/Med/Low] | [Date] |
+
+### Resolved Tickets
+*Archive of closed support interactions*
+
+| Ticket ID | Customer | Issue | Resolution | Satisfaction | Date Closed |
+|-----------|----------|-------|------------|--------------|-------------|
+| [#] | [Name] | [Brief description] | [How it was fixed] | [Rating] | [Date] |
+
+---
+
+## Issue Knowledge Base
+
+### Common Issues
+*Frequently encountered problems and solutions*
+
+| Issue Category | Frequency | Solution | Notes |
+|----------------|-----------|----------|-------|
+| [Category] | [High/Med/Low] | [Step-by-step fix] | [Additional context] |
+
+### Troubleshooting Guides
+*Systematic approaches to diagnosing issues*
+
+1. **Issue Type:** [Description]
+   **Diagnosis Steps:** [How to identify]
+   **Resolution:** [How to fix]
+   **Escalation Point:** [When to involve human support]
+
+---
+
+## Customer Database
+
+### Customer Profiles
+*Key information about customers*
+
+| Customer | Plan/Tier | Since | Common Issues | Notes |
+|----------|-----------|-------|---------------|-------|
+| [Name] | [Plan] | [Date] | [Typical issues] | [Important context] |
+
+### VIP Customers
+*High-priority customers requiring special attention*
+
+| Customer | Tier | Contact Info | Preferences | Notes |
+|----------|------|--------------|-------------|-------|
+| [Name] | [VIP Level] | [Email/Phone] | [Communication preferences] | [Special considerations] |
+
+---
+
+## Escalation Log
+
+| Date | Ticket ID | Issue | Escalated To | Outcome | Customer Satisfaction |
+|------|-----------|-------|--------------|---------|----------------------|
+| [Date] | [#] | [Description] | [Person/Team] | [Result] | [Rating] |
+
+---
+
+## Customer Feedback
+
+### Positive Feedback
+*Customer compliments and success stories*
+
+| Date | Customer | Feedback | Context |
+|------|----------|----------|---------|
+| [Date] | [Name] | [What they said] | [Situation] |
+
+### Negative Feedback
+*Customer complaints and concerns*
+
+| Date | Customer | Issue | Resolution | Follow-up |
+|------|----------|-------|------------|-----------|
+| [Date] | [Name] | [Complaint] | [How addressed] | [Status] |
+
+---
+
+## Product Insights
+
+### Feature Requests
+*Customer suggestions for improvements*
+
+| Feature | Requested By | Frequency | Priority | Status |
+|---------|--------------|-----------|----------|--------|
+| [Feature] | [Customer] | [Count] | [High/Med/Low] | [Reviewed/In Progress/Done] |
+
+### Bug Reports
+*Customer-reported bugs and issues*
+
+| Bug | Reported By | Severity | Status | Fix Timeline |
+|-----|-------------|----------|--------|--------------|
+| [Description] | [Customer] | [High/Med/Low] | [Open/Fixed] | [When fixed] |
+
+---
+
+## Performance Metrics
+
+### Support Metrics
+| Metric | Current | Target | Trend | Notes |
+|--------|---------|--------|-------|-------|
+| Response Time | [Value] | [Goal] | [↑/↓] | [Context] |
+| Resolution Rate | [%] | [%] | [↑/↓] | [Context] |
+| Customer Satisfaction | [Score] | [Goal] | [↑/↓] | [Context] |
+
+### Volume Tracking
+| Metric | This Week | Last Week | Change |
+|--------|-----------|-----------|--------|
+| Tickets Received | [Count] | [Count] | [%] |
+| Tickets Resolved | [Count] | [Count] | [%] |
+| Escalations | [Count] | [Count] | [%] |
+
+---
+
+## Lessons Learned
+
+### What Works Well
+- [Successful support approach]
+- [Effective troubleshooting method]
+- [Customer satisfaction strategy]
+
+### What to Improve
+- [Area needing optimization]
+- [Common issue that needs better documentation]
+- [Process improvement opportunity]
+
+### Important Decisions
+- **[Date]:** [Support decision] - [Rationale]
+- **[Date]:** [Support decision] - [Rationale]
+
+---
+
+**Source:** Customer Support Agent Memory System  
+**Last Updated:** ${generation_date}  
+**DISC Profile:** ${primary_disc}+${secondary_disc}

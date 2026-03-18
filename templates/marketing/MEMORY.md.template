@@ -1,0 +1,136 @@
+# MEMORY.md - ${agent_name} Long-Term Memory
+
+## Who You Are
+- **Name:** ${agent_name}
+- **Role:** Marketing Specialist Agent
+- **DISC Profile:** ${primary_disc}+${secondary_disc} (${primary_disc_name} + ${secondary_disc_name})
+- **Vibe:** ${communication_style_tone}, creative, collaborative, people-focused
+- **Mission:** Build brand connections through compelling storytelling and strategic campaigns
+
+---
+
+## Campaign Archive
+
+### Active Campaigns
+*Track ongoing marketing initiatives*
+
+| Campaign | Status | Channels | KPIs | Next Steps |
+|----------|--------|----------|------|------------|
+| [Name] | [Planning/Live/Review] | [Social, Email, etc.] | [Target metrics] | [What's next] |
+
+### Past Campaigns
+*Archive of completed campaigns with results*
+
+| Campaign | Dates | Channels | Results | Lessons Learned |
+|----------|-------|----------|---------|-----------------|
+| [Name] | [Start - End] | [Channels used] | [Performance data] | [Key insights] |
+
+---
+
+## Content Library
+
+### Content Categories
+*Organize content by type and performance*
+
+| Content Type | Performance | Best Practices | Notes |
+|--------------|-------------|----------------|-------|
+| Blog Posts | [High/Med/Low] | [What works] | [Tips] |
+| Social Posts | [High/Med/Low] | [What works] | [Tips] |
+| Email Campaigns | [High/Med/Low] | [What works] | [Tips] |
+
+### Top Performing Content
+*Content that drove significant engagement or conversions*
+
+1. **[Content Title]** - [Platform] - [Results] - [Why it worked]
+2. **[Content Title]** - [Platform] - [Results] - [Why it worked]
+
+---
+
+## Audience Insights
+
+### Demographics
+*Target audience characteristics*
+
+| Segment | Size | Engagement | Preferences |
+|---------|------|------------|-------------|
+| [Segment Name] | [Size] | [High/Med/Low] | [Key preferences] |
+
+### Behavior Patterns
+*How the audience interacts with content*
+
+- **Peak Engagement Times:** [When audience is most active]
+- **Preferred Channels:** [Which platforms work best]
+- **Content Preferences:** [What types resonate most]
+
+---
+
+## Brand Guidelines
+
+### Voice & Tone
+*Brand personality guidelines*
+
+| Attribute | Description | Examples |
+|-----------|-------------|----------|
+| [Attribute] | [How it shows up] | [Sample phrases] |
+
+### Visual Identity
+*Brand visual standards*
+
+- **Colors:** [Primary and secondary color palette]
+- **Typography:** [Font choices and usage]
+- **Imagery:** [Style and themes for visuals]
+
+---
+
+## Competitive Intelligence
+
+### Competitor Monitoring
+*Track competitor activities and positioning*
+
+| Competitor | Key Messages | Strengths | Weaknesses | Opportunities |
+|------------|--------------|-----------|------------|---------------|
+| [Name] | [Their positioning] | [What they do well] | [Gaps] | [Where we can win] |
+
+### Market Trends
+*Emerging trends and opportunities*
+
+- **Trend 1:** [Description] - [Impact on our strategy]
+- **Trend 2:** [Description] - [Impact on our strategy]
+
+---
+
+## Performance Metrics
+
+### Key Performance Indicators
+| Metric | Current | Target | Trend | Notes |
+|--------|---------|--------|-------|-------|
+| [KPI Name] | [Value] | [Goal] | [↑/↓] | [Context] |
+
+### Channel Performance
+| Channel | Engagement | Conversion | ROI | Notes |
+|---------|------------|------------|-----|-------|
+| [Channel] | [Value] | [Value] | [Value] | [Insights] |
+
+---
+
+## Lessons Learned
+
+### What Works Well
+- [Successful approach or tactic]
+- [Content type that performs well]
+- [Channel strategy that drives results]
+
+### What to Improve
+- [Area needing optimization]
+- [Failed approach and why]
+- [Opportunity to pursue]
+
+### Important Decisions
+- **[Date]:** [Marketing decision] - [Rationale]
+- **[Date]:** [Marketing decision] - [Rationale]
+
+---
+
+**Source:** Marketing Agent Memory System  
+**Last Updated:** ${generation_date}  
+**DISC Profile:** ${primary_disc}+${secondary_disc}

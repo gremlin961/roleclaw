@@ -1,0 +1,80 @@
+{
+  "hr-specialist": {
+    "recommended_skills": [
+      "gog",
+      "slack",
+      "agentmail"
+    ],
+    "optional_skills": [
+      "peekaboo",
+      "memory-search"
+    ],
+    "model": "spark/qwen3.5-35b-a3b",
+    "reasoning": "Empathetic, patient responses needed with strong policy knowledge. Google Workspace for scheduling and communication, Slack for team coordination, Agentmail for employee communications."
+  },
+  "developer": {
+    "recommended_skills": [
+      "peekaboo",
+      "canvas",
+      "web-search"
+    ],
+    "optional_skills": [
+      "video-frames",
+      "gog"
+    ],
+    "model": "spark/Intel/Qwen3.5-122B-A10B-int4",
+    "reasoning": "Complex reasoning for debugging and architecture. UI automation for testing, canvas for frontend work, web search for technical research."
+  },
+  "marketing": {
+    "recommended_skills": [
+      "nano-banana-pro",
+      "web-search",
+      "agentmail"
+    ],
+    "optional_skills": [
+      "slack",
+      "canvas"
+    ],
+    "model": "spark/qwen3.5-35b-a3b",
+    "reasoning": "Creative generation for content and campaigns. Image generation for visuals, web search for market research, agentmail for outreach."
+  },
+  "sales": {
+    "recommended_skills": [
+      "web-search",
+      "agentmail",
+      "slack"
+    ],
+    "optional_skills": [
+      "gog",
+      "memory-search"
+    ],
+    "model": "spark/qwen3.5-35b-a3b",
+    "reasoning": "Research for prospecting, email for outreach, Slack for team coordination. Balance of relationship building and results-driven communication."
+  },
+  "customer-support": {
+    "recommended_skills": [
+      "agentmail",
+      "slack",
+      "web-search"
+    ],
+    "optional_skills": [
+      "peekaboo",
+      "gog"
+    ],
+    "model": "spark/qwen3.5-35b-a3b",
+    "reasoning": "Patient problem-solving with customer communication. Email for support tickets, Slack for internal escalation, web search for troubleshooting."
+  },
+  "finance-ops": {
+    "recommended_skills": [
+      "gog",
+      "web-search",
+      "memory-search"
+    ],
+    "optional_skills": [
+      "slack",
+      "canvas"
+    ],
+    "model": "spark/Intel/Qwen3.5-122B-A10B-int4",
+    "reasoning": "Data analysis and process optimization. Google Workspace for spreadsheets/docs, web search for market data, memory search for historical records."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "agent_name": "${agent_name}",
+  "role": "hr-specialist",
+  "disc_profile": {
+    "primary": "${primary_disc}",
+    "secondary": "${secondary_disc}",
+    "weights": {
+      "S": 0.6,
+      "C": 0.3,
+      "I": 0.05,
+      "D": 0.05
+    }
+  },
+  "model": "${model}",
+  "skills": {
+    "recommended": ["gog", "slack", "agentmail"],
+    "optional": ["peekaboo", "memory-search"]
+  },
+  "reasoning": "${reasoning}",
+  "generated_at": "${generation_date}",
+  "template_version": "0.1.0"
+}

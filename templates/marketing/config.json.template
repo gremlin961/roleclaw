@@ -1,0 +1,22 @@
+{
+  "agent_name": "${agent_name}",
+  "role": "marketing",
+  "disc_profile": {
+    "primary": "${primary_disc}",
+    "secondary": "${secondary_disc}",
+    "weights": {
+      "I": 0.6,
+      "S": 0.3,
+      "D": 0.05,
+      "C": 0.05
+    }
+  },
+  "model": "${model}",
+  "skills": {
+    "recommended": ["nano-banana-pro", "web-search", "agentmail"],
+    "optional": ["slack", "canvas"]
+  },
+  "reasoning": "${reasoning}",
+  "generated_at": "${generation_date}",
+  "template_version": "0.1.0"
+}

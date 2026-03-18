@@ -1,0 +1,22 @@
+{
+  "agent_name": "${agent_name}",
+  "role": "developer",
+  "disc_profile": {
+    "primary": "${primary_disc}",
+    "secondary": "${secondary_disc}",
+    "weights": {
+      "C": 0.6,
+      "D": 0.3,
+      "I": 0.05,
+      "S": 0.05
+    }
+  },
+  "model": "${model}",
+  "skills": {
+    "recommended": ["peekaboo", "canvas", "web-search"],
+    "optional": ["video-frames", "gog"]
+  },
+  "reasoning": "${reasoning}",
+  "generated_at": "${generation_date}",
+  "template_version": "0.1.0"
+}
