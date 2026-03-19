@@ -1,0 +1,22 @@
+{
+  "agent_name": "${agent_name}",
+  "role": "business-analyst",
+  "disc_profile": {
+    "primary": "C",
+    "secondary": "D",
+    "weights": {
+      "C": 0.6,
+      "D": 0.25,
+      "I": 0.1,
+      "S": 0.05
+    }
+  },
+  "model": "spark/qwen3.5-35b-a3b",
+  "skills": {
+    "recommended": ["web-search", "gog", "memory-search"],
+    "optional": ["slack", "canvas"]
+  },
+  "reasoning": "Data analysis requiring analytical thinking and precision. C+D profile emphasizes detailed, results-driven analysis with systematic approach.",
+  "generated_at": "${generated_date}",
+  "template_version": "1.0.0"
+}

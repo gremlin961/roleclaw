@@ -1,0 +1,23 @@
+{
+  "agent_name": "${agent_name}",
+  "role": "legal-compliance",
+  "disc_profile": {
+    "primary": "X",
+    "secondary": "Y",
+    "weights": {}
+  },
+  "model": "spark/Intel/Qwen3.5-122B-A10B-int4",
+  "skills": {
+    "recommended": [
+      "web-search",
+      "memory-search",
+      "agentmail"
+    ],
+    "optional": [
+      "slack"
+    ]
+  },
+  "reasoning": "Compliance and legal enforcement.",
+  "generated_at": "${generated_date}",
+  "template_version": "1.0.0"
+}

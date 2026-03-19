@@ -1,0 +1,23 @@
+{
+  "agent_name": "${agent_name}",
+  "role": "operations-manager",
+  "disc_profile": {
+    "primary": "X",
+    "secondary": "Y",
+    "weights": {}
+  },
+  "model": "spark/Intel/Qwen3.5-122B-A10B-int4",
+  "skills": {
+    "recommended": [
+      "gog",
+      "slack",
+      "memory-search"
+    ],
+    "optional": [
+      "peekaboo"
+    ]
+  },
+  "reasoning": "Process optimization and operations.",
+  "generated_at": "${generated_date}",
+  "template_version": "1.0.0"
+}

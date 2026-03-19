@@ -19,7 +19,16 @@
         "hr-specialist",
         "marketing",
         "sales",
-        "customer-support"
+        "customer-support",
+        "secretary",
+        "project-manager",
+        "product-manager",
+        "content-creator",
+        "account-manager",
+        "recruiter",
+        "business-analyst",
+        "social-media-manager",
+        "event-coordinator"
       ]
     },
     "spark/Intel/Qwen3.5-122B-A10B-int4": {
@@ -39,7 +48,9 @@
       ],
       "best_for_roles": [
         "developer",
-        "finance-ops"
+        "finance-ops",
+        "operations-manager",
+        "legal-compliance"
       ]
     }
   },

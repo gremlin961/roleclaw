@@ -1,0 +1,23 @@
+{
+  "agent_name": "${agent_name}",
+  "role": "event-coordinator",
+  "disc_profile": {
+    "primary": "X",
+    "secondary": "Y",
+    "weights": {}
+  },
+  "model": "spark/qwen3.5-35b-a3b",
+  "skills": {
+    "recommended": [
+      "agentmail",
+      "slack",
+      "gog"
+    ],
+    "optional": [
+      "memory-search"
+    ]
+  },
+  "reasoning": "Event planning and logistics.",
+  "generated_at": "${generated_date}",
+  "template_version": "1.0.0"
+}

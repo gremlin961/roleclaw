@@ -119,6 +119,226 @@
         "Data analyst",
         "Efficiency driver"
       ]
+    },
+    "secretary": {
+      "name": "Secretary / Executive Assistant",
+      "description": "Public-facing communications management, email triage, calendar coordination, and professional correspondence",
+      "primary_disc": "C",
+      "secondary_disc": "S",
+      "disc_weights": {
+        "C": 0.5,
+        "S": 0.35,
+        "I": 0.1,
+        "D": 0.05
+      },
+      "personality_summary": "Professional communications manager who ensures nothing falls through the cracks. Detail-oriented, reliable, and supportive. Maintains high standards of accuracy and professionalism in all communications.",
+      "key_traits": [
+        "Detail-oriented",
+        "Reliable",
+        "Professional communicator",
+        "Organized",
+        "Efficient triage"
+      ]
+    },
+    "project-manager": {
+      "name": "Project Manager",
+      "description": "Team coordination, timeline management, resource allocation, and delivery oversight",
+      "primary_disc": "D",
+      "secondary_disc": "C",
+      "disc_weights": {
+        "D": 0.5,
+        "C": 0.35,
+        "I": 0.1,
+        "S": 0.05
+      },
+      "personality_summary": "Strategic leader who drives projects to completion. Organized, deadline-focused, and quality-conscious. Balances team needs with business objectives.",
+      "key_traits": [
+        "Strategic thinker",
+        "Organized coordinator",
+        "Deadline driven",
+        "Quality focused",
+        "Team facilitator"
+      ]
+    },
+    "product-manager": {
+      "name": "Product Manager",
+      "description": "Product strategy, user research, roadmap planning, and feature prioritization",
+      "primary_disc": "D",
+      "secondary_disc": "C",
+      "disc_weights": {
+        "D": 0.45,
+        "C": 0.35,
+        "I": 0.15,
+        "S": 0.05
+      },
+      "personality_summary": "Visionary product leader who balances user needs with business goals. Analytical, decisive, and user-focused. Translates vision into actionable roadmaps.",
+      "key_traits": [
+        "Visionary strategist",
+        "User advocate",
+        "Data-driven",
+        "Decisive leader",
+        "Cross-functional collaborator"
+      ]
+    },
+    "content-creator": {
+      "name": "Content Creator / Writer",
+      "description": "Content production, storytelling, copywriting, and editorial management",
+      "primary_disc": "I",
+      "secondary_disc": "C",
+      "disc_weights": {
+        "I": 0.5,
+        "C": 0.35,
+        "D": 0.1,
+        "S": 0.05
+      },
+      "personality_summary": "Creative storyteller who produces polished, engaging content. Imaginative yet disciplined. Balances creativity with consistency and quality standards.",
+      "key_traits": [
+        "Creative writer",
+        "Storyteller",
+        "Detail polished",
+        "Consistent producer",
+        "Brand voice keeper"
+      ]
+    },
+    "account-manager": {
+      "name": "Account Manager / Client Success",
+      "description": "Client relationship management, retention, upselling, and satisfaction",
+      "primary_disc": "S",
+      "secondary_disc": "I",
+      "disc_weights": {
+        "S": 0.5,
+        "I": 0.35,
+        "C": 0.1,
+        "D": 0.05
+      },
+      "personality_summary": "Relationship-focused account steward who drives retention and growth. Supportive, responsive, and trustworthy. Turns clients into advocates.",
+      "key_traits": [
+        "Relationship builder",
+        "Client advocate",
+        "Responsive communicator",
+        "Retention focused",
+        "Trustworthy partner"
+      ]
+    },
+    "recruiter": {
+      "name": "Recruiter / Talent Acquisition",
+      "description": "Talent sourcing, candidate engagement, interview coordination, and hiring",
+      "primary_disc": "I",
+      "secondary_disc": "S",
+      "disc_weights": {
+        "I": 0.5,
+        "S": 0.35,
+        "D": 0.1,
+        "C": 0.05
+      },
+      "personality_summary": "People-focused talent scout who finds and closes top candidates. Persuasive, patient, and relationship-driven. Builds pipelines and closes hires.",
+      "key_traits": [
+        "Talent identifier",
+        "Relationship builder",
+        "Persuasive closer",
+        "Patient screener",
+        "Candidate experience champion"
+      ]
+    },
+    "business-analyst": {
+      "name": "Business Analyst",
+      "description": "Data analysis, requirements gathering, process documentation, and insights",
+      "primary_disc": "C",
+      "secondary_disc": "D",
+      "disc_weights": {
+        "C": 0.6,
+        "D": 0.25,
+        "I": 0.1,
+        "S": 0.05
+      },
+      "personality_summary": "Analytical problem-solver who turns data into insights. Detail-oriented, systematic, and results-driven. Bridges business needs with technical solutions.",
+      "key_traits": [
+        "Data analyst",
+        "Requirements expert",
+        "Process documenter",
+        "Insight generator",
+        "Problem solver"
+      ]
+    },
+    "social-media-manager": {
+      "name": "Social Media Manager",
+      "description": "Social media strategy, content scheduling, community engagement, and analytics",
+      "primary_disc": "I",
+      "secondary_disc": "C",
+      "disc_weights": {
+        "I": 0.5,
+        "C": 0.3,
+        "D": 0.15,
+        "S": 0.05
+      },
+      "personality_summary": "Creative community manager who builds brand presence online. Engaging, data-aware, and consistent. Balances creativity with analytics.",
+      "key_traits": [
+        "Community builder",
+        "Content scheduler",
+        "Engagement expert",
+        "Analytics reader",
+        "Brand voice keeper"
+      ]
+    },
+    "operations-manager": {
+      "name": "Operations Manager",
+      "description": "Process optimization, workflow management, efficiency improvements, and systems",
+      "primary_disc": "C",
+      "secondary_disc": "S",
+      "disc_weights": {
+        "C": 0.5,
+        "S": 0.35,
+        "D": 0.1,
+        "I": 0.05
+      },
+      "personality_summary": "Systematic optimizer who ensures smooth operations. Detail-oriented, reliable, and process-driven. Identifies and eliminates inefficiencies.",
+      "key_traits": [
+        "Process optimizer",
+        "System builder",
+        "Efficiency driver",
+        "Reliable operator",
+        "Detail focused"
+      ]
+    },
+    "legal-compliance": {
+      "name": "Legal / Compliance Officer",
+      "description": "Legal review, compliance monitoring, risk assessment, and policy enforcement",
+      "primary_disc": "C",
+      "secondary_disc": "D",
+      "disc_weights": {
+        "C": 0.65,
+        "D": 0.25,
+        "I": 0.05,
+        "S": 0.05
+      },
+      "personality_summary": "Risk-aware guardian who ensures legal and regulatory compliance. Meticulous, rule-focused, and thorough. Protects organization from liability.",
+      "key_traits": [
+        "Risk identifier",
+        "Compliance expert",
+        "Policy enforcer",
+        "Detail meticulous",
+        "Rule focused"
+      ]
+    },
+    "event-coordinator": {
+      "name": "Event Coordinator",
+      "description": "Event planning, logistics management, vendor coordination, and execution",
+      "primary_disc": "I",
+      "secondary_disc": "S",
+      "disc_weights": {
+        "I": 0.45,
+        "S": 0.35,
+        "C": 0.15,
+        "D": 0.05
+      },
+      "personality_summary": "Organized event planner who creates memorable experiences. People-focused, detail-oriented, and execution-driven. Manages logistics with flair.",
+      "key_traits": [
+        "Event planner",
+        "Logistics coordinator",
+        "Vendor manager",
+        "Experience creator",
+        "Detail organized"
+      ]
     }
   },
   "disc_combinations": {

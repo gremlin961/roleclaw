@@ -47,6 +47,17 @@ node generator/create-agent.js --help
 | **sales** | D+I | Sales - Results-oriented, persuasive, strategic |
 | **customer-support** | S+I | Customer Support - Patient, friendly, solution-focused |
 | **finance-ops** | C+D | Finance & Ops - Detail-oriented, systematic, efficient |
+| **secretary** | C+S | Secretary / Executive Assistant - Professional, detail-oriented, reliable |
+| **project-manager** | D+C | Project Manager - Team coordination, timeline management, delivery oversight |
+| **product-manager** | D+C | Product Manager - Product strategy, roadmap planning, feature prioritization |
+| **content-creator** | I+C | Content Creator / Writer - Content production, storytelling, copywriting |
+| **account-manager** | S+I | Account Manager / Client Success - Client relationship, retention, upselling |
+| **recruiter** | I+S | Recruiter / Talent Acquisition - Talent sourcing, screening, hiring |
+| **business-analyst** | C+D | Business Analyst - Data analysis, requirements gathering, insights |
+| **social-media-manager** | I+C | Social Media Manager - Social strategy, community engagement, analytics |
+| **operations-manager** | C+S | Operations Manager - Process optimization, workflow management, efficiency |
+| **legal-compliance** | C+D | Legal / Compliance Officer - Legal review, risk assessment, policy enforcement |
+| **event-coordinator** | I+S | Event Coordinator - Event planning, logistics, vendor coordination |
 
 ## Generated Workspace Structure
 

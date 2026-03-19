@@ -76,5 +76,146 @@
     ],
     "model": "spark/Intel/Qwen3.5-122B-A10B-int4",
     "reasoning": "Data analysis and process optimization. Google Workspace for spreadsheets/docs, web search for market data, memory search for historical records."
+  },
+  "secretary": {
+    "recommended_skills": [
+      "agentmail",
+      "slack",
+      "gog"
+    ],
+    "optional_skills": [
+      "peekaboo",
+      "memory-search"
+    ],
+    "model": "spark/qwen3.5-35b-a3b",
+    "reasoning": "Detail-oriented communications requiring accuracy and professionalism. C+S DISC profile emphasizes careful, reliable responses with skills for email (agentmail), chat (slack), and calendar (gog)."
+  },
+  "project-manager": {
+    "recommended_skills": [
+      "slack",
+      "gog",
+      "canvas",
+      "memory-search"
+    ],
+    "optional_skills": [
+      "peekaboo",
+      "web-search"
+    ],
+    "model": "spark/qwen3.5-35b-a3b",
+    "reasoning": "Strategic planning and team coordination."
+  },
+  "product-manager": {
+    "recommended_skills": [
+      "web-search",
+      "agentmail",
+      "canvas",
+      "memory-search"
+    ],
+    "optional_skills": [
+      "slack",
+      "gog"
+    ],
+    "model": "spark/qwen3.5-35b-a3b",
+    "reasoning": "Product strategy and analytical thinking."
+  },
+  "content-creator": {
+    "recommended_skills": [
+      "nano-banana-pro",
+      "agentmail",
+      "web-search"
+    ],
+    "optional_skills": [
+      "slack",
+      "canvas"
+    ],
+    "model": "spark/qwen3.5-35b-a3b",
+    "reasoning": "Creative content generation requiring imagination."
+  },
+  "account-manager": {
+    "recommended_skills": [
+      "agentmail",
+      "slack",
+      "gog",
+      "memory-search"
+    ],
+    "optional_skills": [
+      "peekaboo"
+    ],
+    "model": "spark/qwen3.5-35b-a3b",
+    "reasoning": "Relationship-focused communications."
+  },
+  "recruiter": {
+    "recommended_skills": [
+      "web-search",
+      "agentmail",
+      "slack"
+    ],
+    "optional_skills": [
+      "gog",
+      "memory-search"
+    ],
+    "model": "spark/qwen3.5-35b-a3b",
+    "reasoning": "Talent acquisition and engagement."
+  },
+  "business-analyst": {
+    "recommended_skills": [
+      "web-search",
+      "gog",
+      "memory-search"
+    ],
+    "optional_skills": [
+      "slack",
+      "canvas"
+    ],
+    "model": "spark/qwen3.5-35b-a3b",
+    "reasoning": "Data analysis requiring analytical thinking."
+  },
+  "social-media-manager": {
+    "recommended_skills": [
+      "nano-banana-pro",
+      "agentmail",
+      "slack"
+    ],
+    "optional_skills": [
+      "web-search"
+    ],
+    "model": "spark/qwen3.5-35b-a3b",
+    "reasoning": "Creative community management."
+  },
+  "operations-manager": {
+    "recommended_skills": [
+      "gog",
+      "slack",
+      "memory-search"
+    ],
+    "optional_skills": [
+      "peekaboo"
+    ],
+    "model": "spark/Intel/Qwen3.5-122B-A10B-int4",
+    "reasoning": "Process optimization and operations."
+  },
+  "legal-compliance": {
+    "recommended_skills": [
+      "web-search",
+      "memory-search",
+      "agentmail"
+    ],
+    "optional_skills": [
+      "slack"
+    ],
+    "model": "spark/Intel/Qwen3.5-122B-A10B-int4",
+    "reasoning": "Compliance and legal enforcement."
+  },
+  "event-coordinator": {
+    "recommended_skills": [
+      "agentmail",
+      "slack",
+      "gog"
+    ],
+    "optional_skills": [
+      "memory-search"
+    ],
+    "model": "spark/qwen3.5-35b-a3b",
+    "reasoning": "Event planning and logistics."
   }
 }

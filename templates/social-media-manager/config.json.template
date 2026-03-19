@@ -1,0 +1,23 @@
+{
+  "agent_name": "${agent_name}",
+  "role": "social-media-manager",
+  "disc_profile": {
+    "primary": "X",
+    "secondary": "Y",
+    "weights": {}
+  },
+  "model": "spark/qwen3.5-35b-a3b",
+  "skills": {
+    "recommended": [
+      "nano-banana-pro",
+      "agentmail",
+      "slack"
+    ],
+    "optional": [
+      "web-search"
+    ]
+  },
+  "reasoning": "Creative community management.",
+  "generated_at": "${generated_date}",
+  "template_version": "1.0.0"
+}
