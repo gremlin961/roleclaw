@@ -1,16 +1,17 @@
-# DISC Agent Blueprint System - Architecture Review
+# RoleClaw Blueprint System - Architecture
 
-> **Purpose:** Create role-specific AI agents with personality-driven behaviors based on DISC profiling
+> **Purpose:** A "Talent Agency" for AI Agents. Discover, configure, and seamlessly deploy pre-configured OpenClaw agents tailored to specific job roles and driven by DISC personality profiling.
 
 ---
 
 ## 🎯 Vision
 
-Build a system that generates complete, production-ready OpenClaw agents tailored to specific job roles. Each agent has:
-- **DISC-driven personality** (communication style, strengths, boundaries)
-- **Role-appropriate skill set** (vetted ClawHub skills)
-- **Optimized model selection** (based on role requirements)
-- **Structured memory architecture** (lean, privacy-conscious)
+Transitioning from a generic marketplace to a "Talent Agency" model where users "hire" and "onboard" AI candidates. 
+
+RoleClaw (DISC + OpenClaw) abstracts away the complexity of manual workspace creation and OpenClaw registration. It provides an intuitive CLI to:
+1. **Search** for the right AI candidate based on role or traits.
+2. **Configure** their identity and tools interactively (the "Interview").
+3. **Deploy** them directly to a local OpenClaw instance automatically (the "Onboarding").
 
 ---
 
@@ -20,267 +21,104 @@ Build a system that generates complete, production-ready OpenClaw agents tailore
 /Users/toby/git/disc-agent-builder/
 ├── README.md                    # Project overview
 ├── ARCHITECTURE.md              # This file
+├── package.json                 # Node dependencies and 'roleclaw' bin
+├── bin/
+│   └── roleclaw.js                 # CLI entrypoint
+├── src/
+│   ├── commands/                # CLI commands (search, hire)
+│   ├── registry/                # Central candidate registry builder
+│   ├── utils/                   # Shared utilities (OpenClaw bridge)
+│   └── templates/               # Role-specific OpenClaw workspaces
 ├── templates/                   # Role templates
 │   ├── hr-specialist/
+│   │   ├── manifest.json        # Candidate profile and metadata
 │   │   ├── SOUL.md.template
 │   │   ├── MEMORY.md.template
 │   │   ├── TOOLS.md.template
 │   │   ├── AGENTS.md.template
 │   │   ├── HEARTBEAT.md.template
 │   │   └── config.json.template
-│   ├── developer/
-│   ├── marketing/
-│   ├── sales/
-│   ├── customer-support/
-│   └── finance-ops/
+│   └── ... (other roles)
 ├── disc-profiles/               # DISC personality definitions
-│   ├── D-dominance.json
-│   ├── I-influence.json
-│   ├── S-steadiness.json
-│   ├── C-conscientiousness.json
-│   └── combinations/
-│       ├── S+C.json             # HR Specialist
-│       ├── C+D.json             # Developer
-│       ├── I+S.json             # Marketing (Pepper)
-│       └── D+C.json             # Sales
-├── skills-mapping/              # Role → ClawHub skill recommendations
-│   └── role-skills.json
+├── skills-mapping/              # Role → OpenClaw skill recommendations
 ├── models-mapping/              # Role → Recommended LLMs
-│   └── role-models.json
-├── generator/                   # Agent creation scripts
-│   ├── create-agent.js          # Main generator script
-│   ├── render-template.js       # Template rendering logic
-│   └── install-skills.js        # Skill installer
-├── marketplace/                 # ClawHub export packages
-│   └── agent-packages/
 └── tests/                       # Validation tests
-    └── test-pepper-agent.js     # Test instantiation
 ```
 
 ---
 
 ## 🔑 Core Components
 
-### 1. DISC Profile Structure
-
-Each DISC type gets a comprehensive personality definition:
+### 1. The Registry (The "Talent Pool")
+A centralized registry catalogs all available AI candidates. It parses the `manifest.json` files from each template directory to build a comprehensive list of roles, traits, and skills.
 
 ```json
+// Example candidate manifest (hr-specialist/manifest.json)
 {
-  "type": "S",
-  "name": "Steadiness",
-  "core_traits": ["Patient", "Reliable", "Team-oriented", "Stable"],
-  "communication_style": {
-    "tone": "Warm, supportive, non-confrontational",
-    "pacing": "Deliberate, thoughtful",
-    "conflict_approach": "Avoids confrontation, seeks harmony",
-    "feedback_style": "Gentle, constructive, private"
-  },
-  "strengths": [
-    "Excellent listener",
-    "Consistent performer",
-    "Builds trust quickly",
-    "Great at maintaining relationships"
-  ],
-  "weaknesses": [
-    "Resists change",
-    "May agree just to keep peace",
-    "Struggles with prioritization",
-    "Can be overly accommodating"
-  ],
-  "motivators": [
-    "Stable environment",
-    "Clear expectations",
-    "Team cohesion",
-    "Recognition for reliability"
-  ],
-  "stress_triggers": [
-    "Sudden changes",
-    "Public criticism",
-    "Unclear expectations",
-    "Conflict-heavy environments"
-  ],
-  "ideal_roles": ["HR", "Customer Support", "Operations", "Training"],
-  "soul_guidance": {
-    "identity_template": "...",
-    "communication_template": "...",
-    "boundaries_template": "...",
-    "work_rhythm_template": "..."
-  }
+  "role_id": "hr-specialist",
+  "title": "HR & Employee Relations Specialist",
+  "disc_profile": "S+C",
+  "traits": ["Empathetic", "Patient", "Detail-oriented"],
+  "capabilities": ["Conflict Resolution", "Onboarding", "Policy QA"],
+  "recommended_skills": ["gog", "slack", "agentmail"],
+  "model": "spark/qwen3.5-35b-a3b"
 }
 ```
 
-### 2. Role-to-DISC Mapping
+### 2. The CLI Commands
 
-| Role | Primary DISC | Secondary | Personality Summary |
-|------|--------------|-----------|---------------------|
-| **HR Specialist** | **S** (Steadiness) | **C** (Conscientiousness) | Empathetic, patient, detail-oriented. Builds trust, handles sensitive situations diplomatically. |
-| **Developer** | **C** (Conscientiousness) | **D** (Dominance) | Analytical, precise, results-driven. Values quality, efficiency, problem-solving. Direct communication. |
-| **Marketing** | **I** (Influence) | **S** (Steadiness) | Creative, collaborative, people-focused. Builds relationships, tells compelling stories. |
-| **Sales** | **D** (Dominance) | **C** (Conscientiousness) | Results-oriented, persuasive, strategic. Closes deals while maintaining accuracy. |
-| **Customer Support** | **S** (Steadiness) | **I** (Influence) | Patient, friendly, solution-focused. Makes customers feel heard and valued. |
-| **Finance/Ops** | **C** (Conscientiousness) | **D** (Dominance) | Detail-oriented, systematic, efficient. Ensures accuracy while driving results. |
+**`roleclaw search [query]`**
+Queries the registry to find matching templates by role name, DISC trait, or capability. Returns a formatted "Candidate Profile" list.
 
-### 3. Template File Structure
+**`roleclaw hire <role_id>`**
+Initiates the interactive configuration and deployment flow:
+1. Prompts for the agent's name and emoji.
+2. Prompts for LLM model selection.
+3. Reviews and confirms the security/skill background check.
+4. Generates the OpenClaw workspace.
+5. Invokes OpenClaw CLI programmatically to register and deploy.
 
-Each agent template generates:
+### 3. OpenClaw Bridge (`src/utils/openclaw-bridge.js`)
+A programmatic wrapper around the OpenClaw CLI using Node's `child_process`. It automates the manual steps of:
+- `openclaw agents add ...`
+- `openclaw agents set-identity ...`
+- (Future) automated skill installation requests.
+
+---
+
+## 🔄 The Deployment Flow
 
 ```
-agent-workspace/
-├── SOUL.md              # Personality guide (DISC-driven)
-├── MEMORY.md            # Long-term memory structure
-├── TOOLS.md             # Role-specific tools & skills
-├── AGENTS.md            # Workspace protocols (shared)
-├── HEARTBEAT.md         # Periodic check tasks
-└── config.json          # Model, skills, settings
-```
-
-### 4. Skills Mapping System
-
-```json
-{
-  "hr-specialist": {
-    "recommended_skills": [
-      "gog",
-      "slack",
-      "agentmail",
-      "healthcheck"
-    ],
-    "optional_skills": ["peekaboo", "memory-search"],
-    "model": "spark/qwen3.5-35b-a3b",
-    "reasoning": "Empathetic, patient responses needed"
-  },
-  "developer": {
-    "recommended_skills": [
-      "peekaboo",
-      "video-frames",
-      "canvas"
-    ],
-    "optional_skills": ["gog", "web-search"],
-    "model": "spark/Intel/Qwen3.5-122B-A10B-int4",
-    "reasoning": "Complex reasoning for debugging"
-  },
-  "marketing": {
-    "recommended_skills": [
-      "nano-banana-pro",
-      "web-search",
-      "agentmail"
-    ],
-    "optional_skills": ["slack", "canvas"],
-    "model": "spark/qwen3.5-35b-a3b",
-    "reasoning": "Creative generation + research"
-  }
-}
+1. User runs: roleclaw hire hr-specialist
+2. CLI prompts: "What is the agent's name?" -> User types "Sarah"
+3. CLI prompts for Model selection.
+4. CLI warns about required skills (gog, slack, etc.) and asks for confirmation.
+5. Under the hood:
+   a. Renders template to ~/.openclaw/workspace/agents/hr-specialist
+   b. Exec: openclaw agents add hr-specialist --workspace <path>
+   c. Exec: openclaw agents set-identity --agent hr-specialist --name "Sarah" --emoji "👩‍💼"
+6. Output: "🎉 Sarah is hired and ready to work!"
 ```
 
 ---
 
-## 🔄 Automation Flow
+## 🛠️ Implementation Phases
 
-### Option A: Manual Template Selection (MVP)
+### Phase 1: The Registry & Search
+- Create the `manifest.json` structure for existing templates.
+- Build the registry builder (`catalog.json` generator).
+- Implement the `roleclaw search` command.
 
-```
-1. User runs: create-agent --role=hr-specialist --name="Sarah"
-2. System loads template + DISC profile (S+C)
-3. User customizes (name, specific skills, etc.)
-4. Generator creates workspace files
-5. Skills auto-installed from ClawHub
-6. Agent ready to deploy
-```
+### Phase 2: Interactive "Hire" Command
+- Implement the interactive prompt flow using `inquirer`/`prompts`.
+- Update the template engine to use the user's interactive inputs.
 
-### Option B: Full Automation (Future)
-
-```
-1. User provides job description or role name
-2. AI recommends DISC profile + role match
-3. System auto-generates complete agent
-4. Deploys to OpenClaw instance
-5. Agent announces itself to team
-```
+### Phase 3: OpenClaw Bridge
+- Implement `execSync` wrapper for OpenClaw commands.
+- Integrate the bridge into the end of the `roleclaw hire` command.
 
 ---
 
-## 🛠️ Build Order
-
-### Phase 1: Foundation
-1. **DISC Profile Database** - JSON files for all 4 types + common combinations
-2. **Template Engine** - Script that generates workspace from template
-3. **HR & Developer Templates** - Two contrasting examples
-
-### Phase 2: Validation
-4. **Test with Pepper** - Marketing I+S agent as proof of concept
-5. **Skill Installer** - Auto-download and enable recommended skills
-6. **Config Generator** - Create proper OpenClaw configuration
-
-### Phase 3: Distribution
-7. **Marketplace Packaging** - Export blueprints for ClawHub
-8. **CLI Interface** - Simple command-line tool
-9. **Documentation** - User guide for blueprint creators
-
----
-
-## ❓ Questions to Answer Before Building
-
-### 1. Template System
-- **Template format:** Simple `.template` files (no templating engine)
-- **Variable syntax:** `${variable}` syntax for placeholders
-
-### 2. DISC Combinations
-- **Dynamic mixing:** Calculate DISC profile based on role type, not pre-defined combinations
-- **Weighting:** Role definitions specify primary/secondary DISC traits with natural weighting
-
-### 3. Skill Installation
-- **Manual approval:** Generator lists recommended skills for user review/approval
-- **No auto-install:** Skills are suggested, not automatically installed
-
-### 4. Model Selection
-- **Template-specified:** Each role template specifies recommended model
-- **Override allowed:** User can override during generation
-
-### 5. ClawHub Integration
-- **Future phase:** Start with local generation, package for ClawHub later
-- **Versioning:** Use semantic versioning (v1.0.0) for blueprint releases
-
-### 6. Testing Strategy
-- **Test agents:** HR Specialist AND Developer (two contrasting roles)
-- **Validation:** Successful workspace generation + readable, role-appropriate SOUL.md
-
----
-
-## 📋 Next Steps
-
-**Before writing code:**
-
-1. [ ] Confirm DISC profile structure (review JSON format above)
-2. [ ] Approve directory structure
-3. [ ] Answer questions in "Questions to Answer Before Building" section
-4. [ ] Select first role to template (HR or Developer?)
-5. [ ] Confirm test agent (Pepper for Marketing?)
-
-**Once approved:**
-
-1. Create directory structure
-2. Build DISC profile JSON files
-3. Create first template (HR or Developer)
-4. Build generator script
-5. Test with Pepper agent
-6. Iterate based on results
-
----
-
-## 🎯 Success Criteria
-
-A successful DISC Agent Blueprint System will:
-
-- ✅ Generate complete, working agent workspaces in <5 minutes
-- ✅ Produce agents with distinct, role-appropriate personalities
-- ✅ Recommend vetted, relevant skills for each role
-- ✅ Be extensible (easy to add new roles/DISC profiles)
-- ✅ Package cleanly for ClawHub distribution
-- ✅ Work reliably across different OpenClaw instances
-
----
-
-**Status:** Architecture Draft - Pending Review  
-**Last Updated:** March 18, 2026  
-**Version:** 0.1
+**Status:** Implementation  
+**Last Updated:** March 19, 2026  
+**Version:** 1.0.0
