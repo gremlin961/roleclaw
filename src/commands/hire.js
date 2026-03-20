@@ -3,7 +3,7 @@ import inquirer from 'inquirer';
 import path from 'path';
 import fs from 'fs';
 import { getCandidate } from '../registry/index.js';
-import { deployToOpenClaw } from '../utils/openclaw-bridge.js';
+import { deployToOpenClaw, getOpenClawModels } from '../utils/openclaw-bridge.js';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -35,6 +35,32 @@ export default async function hireCommand(roleId) {
 
   console.log(chalk.cyan(`\n🤝 Let's onboard your new ${candidate.title}!\n`));
 
+  // Get models from OpenClaw
+  const ocModels = getOpenClawModels();
+  let modelChoices;
+
+  if (ocModels && ocModels.length > 0) {
+    modelChoices = ocModels.map(m => ({
+      name: `${m.name} (${m.key}) ${m.key === candidate.model ? '⭐ Recommended' : ''}`,
+      value: m.key
+    }));
+
+    // If candidate model is not in the list, add it at the top
+    if (!ocModels.some(m => m.key === candidate.model)) {
+      modelChoices.unshift({
+        name: `${candidate.model} (Recommended, not found locally)`,
+        value: candidate.model
+      });
+    }
+  } else {
+    // Fallback to hardcoded defaults
+    modelChoices = [
+      { name: `${candidate.model} (Recommended)`, value: candidate.model },
+      { name: 'spark/qwen3.5-35b-a3b (Fast, Balanced)', value: 'spark/qwen3.5-35b-a3b' },
+      { name: 'spark/Intel/Qwen3.5-122B-A10B-int4 (Complex Reasoning)', value: 'spark/Intel/Qwen3.5-122B-A10B-int4' }
+    ];
+  }
+
   const answers = await inquirer.prompt([
     {
       type: 'input',
@@ -52,11 +78,7 @@ export default async function hireCommand(roleId) {
       type: 'list',
       name: 'model',
       message: 'Choose a model for the agent:',
-      choices: [
-        { name: `${candidate.model} (Recommended)`, value: candidate.model },
-        { name: 'spark/qwen3.5-35b-a3b (Fast, Balanced)', value: 'spark/qwen3.5-35b-a3b' },
-        { name: 'spark/Intel/Qwen3.5-122B-A10B-int4 (Complex Reasoning)', value: 'spark/Intel/Qwen3.5-122B-A10B-int4' }
-      ],
+      choices: modelChoices,
       default: candidate.model
     },
     {

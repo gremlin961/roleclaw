@@ -1,6 +1,16 @@
 import { execSync } from 'child_process';
 import chalk from 'chalk';
 
+export function getOpenClawModels() {
+  try {
+    const output = execSync('openclaw models list --json', { stdio: ['ignore', 'pipe', 'ignore'] }).toString();
+    const data = JSON.parse(output);
+    return data.models || [];
+  } catch (error) {
+    return null;
+  }
+}
+
 export function deployToOpenClaw(roleId, agentName, emoji, workspacePath) {
   const agentId = agentName.toLowerCase();
   
