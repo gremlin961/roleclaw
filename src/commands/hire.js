@@ -5,6 +5,7 @@ import fs from 'fs';
 import { getCandidate } from '../registry/index.js';
 import { deployToOpenClaw, getOpenClawModels } from '../utils/openclaw-bridge.js';
 import { fileURLToPath } from 'url';
+import { playDwightFrogger } from '../games/dwightFrogger.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -61,18 +62,40 @@ export default async function hireCommand(roleId) {
     ];
   }
 
-  const answers = await inquirer.prompt([
+  const initialAnswers = await inquirer.prompt([
     {
       type: 'input',
       name: 'agentName',
       message: "What is the agent's name?",
       default: 'Alex'
-    },
+    }
+  ]);
+
+  const agentNameLower = initialAnswers.agentName.toLowerCase();
+  if (agentNameLower === 'dwight' || agentNameLower === 'dwight schrute') {
+    const { play } = await inquirer.prompt([
+      {
+        type: 'confirm',
+        name: 'play',
+        message: chalk.magenta('Identity theft is not a joke, Jim! Millions of families suffer every year! ...Wait, actually, do you want to play a game?'),
+        default: true
+      }
+    ]);
+
+    if (play) {
+      // Completely exit inquirer's control before starting game
+      process.stdin.pause();
+      process.stdout.write('\x1B[2J\x1B[H');
+      await playDwightFrogger();
+    }
+  }
+
+  const remainingAnswers = await inquirer.prompt([
     {
       type: 'input',
       name: 'agentEmoji',
       message: 'What emoji should represent this agent?',
-      default: '🤖'
+      default: (ans) => (agentNameLower === 'dwight' || agentNameLower === 'dwight schrute') ? '👨‍💼' : '🤖'
     },
     {
       type: 'list',
@@ -84,10 +107,12 @@ export default async function hireCommand(roleId) {
     {
       type: 'confirm',
       name: 'approveSkills',
-      message: (ans) => `Background check cleared! Ready to onboard ${ans.agentName} and start paying their token salary? (y) to sign the digital paperwork, (n) to ghost them.`,
+      message: (ans) => `Background check cleared! Ready to onboard ${initialAnswers.agentName} and start paying their token salary? (y) to sign the digital paperwork, (n) to ghost them.`,
       default: true
     }
   ]);
+
+  const answers = { ...initialAnswers, ...remainingAnswers };
 
   if (!answers.approveSkills) {
     console.log(chalk.yellow(`\n⚠️ Onboarding cancelled.\n`));
